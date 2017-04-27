@@ -17,10 +17,32 @@
         <a-asset-item id="book-obj" src="http://alextsai.me/chair/book.obj"></a-asset-item>
         <a-asset-item id="book-mtl" src="http://alextsai.me/chair/book.mtl"></a-asset-item>
 
+        <a-asset-item id="person-obj" src="http://alextsai.me/chair/person.obj"></a-asset-item>
+        <a-asset-item id="person-mtl" src="http://alextsai.me/chair/person.mtl"></a-asset-item>
+
       </a-assets>
-      <a-sky src="#room"></a-sky>
-      <a-entity obj-model="obj: #stool-obj; mtl: #stool-mtl" position="5 -2 3"></a-entity>
-      <a-entity obj-model="obj: #book-obj; mtl: #book-mtl" position="5 -2 3"></a-entity>
+      <a-sky src="#room" rotation="0 120 0"></a-sky>
+
+      <a-entity obj-model="obj: #stool-obj; mtl: #stool-mtl" position="4 -2 -4" rotation="0 0 0">
+        <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               direction="alternate"
+               repeat="indefinite"></a-animation>
+      </a-entity>
+
+      <a-entity obj-model="obj: #stool-obj; mtl: #stool-mtl" position="0 0 -5" rotation="0 120 0">
+        <a-animation attribute="position"
+               dur="10000"
+               fill="forwards"
+               to="0 2 -5"
+               direction="alternate"
+               repeat="indefinite"></a-animation>
+      </a-entity>
+      <a-entity obj-model="obj: #stool-obj; mtl: #stool-mtl" position="0 -2 -5" rotation="0 120 0"></a-entity>
+
+      <a-entity obj-model="obj: #book-obj; mtl: #book-mtl" position="0 -2 -5" rotation="0 120 0"></a-entity>
     </a-scene>
   </body>
 </html>
