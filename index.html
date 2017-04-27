@@ -10,8 +10,12 @@
     <a-scene>
       <a-assets>
         <img id="room" src="http://alextsai.me/chair/room.jpg">
+
+        <a-asset-item id="stool-obj" src="http://alextsai.me/t3/stool.obj"></a-asset-item>
+        <a-asset-item id="stool-mtl" src="http://alextsai.me/t3/stool.mtl"></a-asset-item>
       </a-assets>
       <a-sky src="#room"></a-sky>
+      <a-entity obj-model="obj: #stool-obj; mtl: #stool-mtl" position="1.7 -0.2 -0.15" scale="0.5 0.5 0.5"></a-entity>
     </a-scene>
   </body>
 </html>
